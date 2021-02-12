@@ -1,0 +1,11 @@
+__pycache__
+.settings
+.project
+.pydevproject
+.vscode
+linecount.json
+linecount.txt
+.DS_Store
+.coverage
+.pytest_cache
+.secret
