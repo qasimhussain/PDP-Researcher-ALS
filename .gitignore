@@ -8,4 +8,4 @@ linecount.txt
 .DS_Store
 .coverage
 .pytest_cache
-.secret
+.secret/
