@@ -46,13 +46,17 @@ def has_UMN_problems(df):
 
 #APP Logic
 # Use some confidential assets
-if os.path.exists(iexec_in + '/test_patient_data.csv'):
+if os.path.exists(iexec_in + '/patient_data.csv'):
 
     print("start pulling data")
-    patient = pd.read_csv(iexec_in + "/test_patient_data.csv")
+    patient = pd.read_csv(iexec_in + "/patient_data.csv")
     is_fast_progressor(patient)
     has_UMN_problems(patient)
     text = result_label.format(f_progressor = is_fast_progressor(patient), umn_porblems = has_UMN_problems(patient))
+
+else:
+    text = "invalid file name"
+    print(text)
 
 # Append some results
 with open(iexec_out + '/result.txt', 'w+') as f:
